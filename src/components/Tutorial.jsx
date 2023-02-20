@@ -3,7 +3,6 @@ import { useDispatch } from "react-redux";
 import { useParams, useNavigate } from "react-router-dom";
 import { updateTutorial, deleteTutorial } from "../slice/tutorials";
 import TutorialDataService from "../services/TutorialService";
-import "../App.css";
 
 export const Tutorial = (props) => {
   const { id } = useParams();

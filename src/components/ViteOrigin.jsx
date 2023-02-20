@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import reactLogo from "../assets/react.svg";
-import "../App.css";
 
 export const ViteOrigin = () => {
   const [count, setCount] = useState(0);

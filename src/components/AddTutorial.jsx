@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { createTutorial } from "../slice/tutorials";
+import "../App.css";
 
 export const AddTutorial = () => {
   const initialTutorialState = {

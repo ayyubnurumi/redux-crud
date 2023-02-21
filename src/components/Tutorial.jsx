@@ -120,27 +120,27 @@ export const Tutorial = (props) => {
 
           {currentTutorial.published ? (
             <button
-              className="badge badge-primary mr-2"
+              className="btn btn-primary mr-2"
               onClick={() => updateStatus(false)}
             >
               UnPublish
             </button>
           ) : (
             <button
-              className="badge badge-primary mr-2"
+              className="btn btn-primary mr-2"
               onClick={() => updateStatus(true)}
             >
               Publish
             </button>
           )}
 
-          <button className="badge badge-danger mr-2" onClick={removeTutorial}>
+          <button className="btn btn-danger mr-2" onClick={removeTutorial}>
             Delete
           </button>
 
           <button
             type="submit"
-            className="badge badge-success"
+            className="btn btn-success"
             onClick={updateContent}
           >
             Update

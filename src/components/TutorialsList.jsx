@@ -3,9 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   retrieveTutorials,
   findTutorialsByTitle,
-  deleteAllTutorials,
 } from "../slice/tutorials";
 import { Link } from "react-router-dom";
+import { AddTutorial } from "./AddTutorial";
 
 export const TutorialsList = () => {
   const [currentTutorial, setCurrentTutorial] = useState(null);
@@ -36,16 +36,6 @@ export const TutorialsList = () => {
   const setActiveTutorial = (tutorial, index) => {
     setCurrentTutorial(tutorial);
     setCurrentIndex(index);
-  };
-
-  const removeAllTutorials = () => {
-    dispatch(deleteAllTutorials())
-      .then((response) => {
-        refreshData();
-      })
-      .catch((e) => {
-        console.log(e);
-      });
   };
 
   const findByTitle = () => {
@@ -95,11 +85,12 @@ export const TutorialsList = () => {
 
         <button
           className="m-3 btn btn-sm btn-danger"
-          onClick={removeAllTutorials}
+          onClick={""}
         >
-          Remove All
+          Add New Tutorial
         </button>
       </div>
+
       <div className="col-md-6">
         {currentTutorial ? (
           <div>
@@ -125,7 +116,7 @@ export const TutorialsList = () => {
 
             <Link
               to={"/tutorials/" + currentTutorial.id}
-              className="badge badge-warning"
+              className="btn btn-warning"
             >
               Edit
             </Link>
@@ -136,6 +127,9 @@ export const TutorialsList = () => {
             <p>Please click on a Tutorial...</p>
           </div>
         )}
+
+        <AddTutorial />
+        
       </div>
     </div>
   );

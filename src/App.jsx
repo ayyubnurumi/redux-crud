@@ -9,10 +9,10 @@ function App() {
   return (
     <>
       <nav
-        className="navbar navbar-expand navbar-dark bg-dark"
+        className="navbar navbar-expand-lg navbar-dark bg-dark"
         style={{ width: "100vw" }}
       >
-        <a href="/tutorials" className="navbar-brand">
+        <a href="/tutorials" className="navbar-brand mx-4">
           bezKoder
         </a>
         <div className="navbar-nav mr-auto">

@@ -1,5 +1,4 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { Action } from "@remix-run/router";
 import TutorialDataService from "../services/TutorialService";
 
 const initialState = [];
@@ -74,9 +73,6 @@ const tutorialSlice = createSlice({
     [deleteTutorial.fulfilled]: (state, action) => {
       let index = state.findIndex(({ id }) => id === action.payload.id);
       state.splice(index, 1);
-    },
-    [deleteAllTutorials.fulfilled]: (state, action) => {
-      return [];
     },
     [findTutorialsByTitle.fulfilled]: (state, action) => {
       return [...action.payload];

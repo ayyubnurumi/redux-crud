@@ -128,7 +128,7 @@ export const TutorialsList = () => {
           </div>
         )}
 
-        <AddTutorial />
+        {/* <AddTutorial /> */}
         
       </div>
     </div>

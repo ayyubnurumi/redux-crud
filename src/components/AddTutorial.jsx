@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { createTutorial } from "../slice/tutorials";
 
 export const AddTutorial = () => {
+  const navigate = useNavigate();
   const initialTutorialState = {
     id: null,
     title: "",
@@ -34,6 +36,7 @@ export const AddTutorial = () => {
           published: data.published,
         });
         setSubmitted(true);
+        navigate("/tutorial")
       })
       .catch((e) => {
         console.log(e);

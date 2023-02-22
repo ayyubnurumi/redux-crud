@@ -20,10 +20,6 @@ const remove = id => {
   return http.delete(`/tutorials/${id}`);
 };
 
-const removeAll = () => {
-  return http.delete(`/tutorials`);
-};
-
 const findByTitle = title => {
   return http.get(`/tutorials?title=${title}`);
 };
@@ -34,7 +30,6 @@ const TutorialService = {
   create,
   update,
   remove,
-  removeAll,
   findByTitle
 };
 

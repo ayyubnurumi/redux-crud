@@ -85,7 +85,7 @@ export const Tutorial = (props) => {
     <div>
       {currentTutorial ? (
         <div className="edit-form">
-          <h4>Tutorial</h4>
+          <h4>Tutoriallll</h4>
           <form>
             <div className="form-group">
               <label htmlFor="title">Title</label>
@@ -112,7 +112,7 @@ export const Tutorial = (props) => {
 
             <div className="form-group">
               <label>
-                <strong>Status:</strong>
+                <strong>Statusss:</strong>
               </label>
               {currentTutorial.published ? "Published" : "Pending"}
             </div>

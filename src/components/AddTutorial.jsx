@@ -49,7 +49,7 @@ export const AddTutorial = () => {
         <div>
           <h4>You submitted successfully!</h4>
           <button className="btn btn-success" onClick={newTutorial}>
-            Addddd
+            Add
           </button>
         </div>
       ) : (
@@ -81,7 +81,7 @@ export const AddTutorial = () => {
           </div>
 
           <button onClick={saveTutorial} className="btn btn-success">
-            Submitttt
+            Submit
           </button>
         </div>
       )}
